@@ -36,7 +36,7 @@ handleChange(e) {
         if (newRoomLength > 0) {
           return true;
         } else {
-          return false;
+          return false;           
 }
     } 
    render() {
@@ -44,8 +44,8 @@ handleChange(e) {
        <section className="room-list">
        <h3>Chat Rooms</h3>
        <ul className='chat'>
-       {this.state.rooms.map((room) => (
-            <li key={room} className="roomname">
+       {this.state.rooms.map((room, index) => (
+            <li key={index} className="roomname">
               {room.name}
               </li>
        ))}
@@ -53,7 +53,7 @@ handleChange(e) {
            <form id="addRoomForm" onSubmit={e => this.createNewRoom(e)}>
           <fieldset>
             <legend>Create New Chat Room</legend>
-            <input type="text" name="newRoomName" placeholder="New Room Name" onChange={e => this.handleChange(e)} />
+            <input type="text" name="newRoomName" placeholder="New Room Name"value ={this.state.newRoomName} onChange={e => this.handleChange(e)} />
             <input type="submit" value="Create" />
           </fieldset>
         </form>
