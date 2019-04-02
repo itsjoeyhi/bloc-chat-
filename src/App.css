@@ -1,15 +1,37 @@
+
+
 .App {
+  text-align: right;
+
+  position: relative;
+  background-color: blue;
+
+}
+#root {
   text-align: center;
 }
-
+ul {
+  text-align: left;
+}
+h2 {
+  border-style: solid;
+}
+.room-list {
+  text-align: center;
+  color: blue;
+}
+#message-text {
+  text-align: center;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
